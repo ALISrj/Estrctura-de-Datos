@@ -1,0 +1,3 @@
+FileWriter.write
+Ejemplo usando append para aniadir con append
+HOla Mundo

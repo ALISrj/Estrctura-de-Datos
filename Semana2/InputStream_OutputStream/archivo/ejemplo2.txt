@@ -1,0 +1,1 @@
+Ejemplo de escritura (output) con bytes
