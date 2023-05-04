@@ -1,0 +1,9 @@
+Número Total de Pacientes ingresados ahora mismo: 1
+Cédula de Identidad: ads
+Apellidos Completos: a
+Nombres Completos: a
+Fecha de Nacimiento: 23-23-23
+Estatura: 23.0
+Peso: 23.0
+Alergias: a
+----------------------------------------
