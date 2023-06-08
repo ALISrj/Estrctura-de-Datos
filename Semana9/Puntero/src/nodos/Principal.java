@@ -1,9 +1,5 @@
 package nodos;
 
-/**
- *
- * @author SALA I
- */
 public class Principal {
 
     public static void main(String[] args) {
