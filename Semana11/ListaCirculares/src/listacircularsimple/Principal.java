@@ -11,8 +11,20 @@ public class Principal {
         lista.add(3);
         lista.add(4);
         
+        System.out.println(lista.head);
+        System.out.println(lista.head.next);
+        System.out.println(lista.head.next.next);
+        System.out.println(lista.tail);
+        System.out.println(lista.tail.next);
+        
+        lista.print();
+        lista = lista.delete(lista, 2);
         lista.print();
         
+        System.out.println(lista.head);
+        System.out.println(lista.head.next);
+        System.out.println(lista.tail);
+        System.out.println(lista.tail.next);
     }
     
 }

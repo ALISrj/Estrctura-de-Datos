@@ -42,6 +42,44 @@ public class SinglyLinkedListC {
         
     }
     
+    public SinglyLinkedListC delete(SinglyLinkedListC list, int key){
     
+        Node currentNode = list.head;
+        Node prev = null;
+        
+        if (currentNode != null && currentNode.data == key) {
+            list.head = currentNode.next;
+            currentNode.next = null;
+            list.tail.next = list.head;
+            System.out.println(key + " found and deleted");
+            return list;
+        }
+        
+        while (currentNode != null && currentNode.data != key) {
+            prev = currentNode;
+            currentNode = currentNode.next;
+        }
+        
+        if (currentNode != null && currentNode == list.tail) {
+            list.tail = prev;
+            list.tail.next = list.head;
+            currentNode.next = null;
+            return list;
+        }
+        
+        if (currentNode != null) {
+            prev.next = currentNode.next;
+            currentNode.next = null;
+            System.out.println(key + " found and deleted");
+        }
+        
+        if(currentNode == null){
+            System.out.println(key + " not found");
+        }
+        
+        return list;
+        
+    
+    }
     
 }

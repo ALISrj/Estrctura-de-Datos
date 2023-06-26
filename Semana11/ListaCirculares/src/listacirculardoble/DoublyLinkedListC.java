@@ -64,5 +64,50 @@ public class DoublyLinkedListC {
         }
 
     }
+    
+    public DoublyLinkedListC delete(DoublyLinkedListC list, int key){
+    
+        Node currentNode = list.head;
+        Node prev = null;
+        
+        if (currentNode != null && currentNode.data == key) {
+            list.head = currentNode.next;
+            currentNode.next = null;
+            list.tail.next = list.head;
+            System.out.println(key + " found and deleted");
+            return list;
+        }
+        
+        while (currentNode != null && currentNode.data != key) {
+            prev = currentNode;
+            currentNode = currentNode.next;
+        }
+        
+        if (currentNode != null && currentNode == list.tail) {
+            list.tail = prev;
+            tail.next = list.head;
+            list.head.previous = list.tail;
+            currentNode.next = null;
+            currentNode.previous = null;
+            return list;
+        }
+        
+        
+        if (currentNode != null) {
+            prev.next = currentNode.next;
+            currentNode.next.previous = prev;
+            currentNode.next = null;
+            currentNode.previous = null;
+            System.out.println(key + " found and deleted");
+        }
+        
+        if(currentNode == null){
+            System.out.println(key + " not found");
+        }
+        
+        return list;
+        
+    
+    }
 
 }
