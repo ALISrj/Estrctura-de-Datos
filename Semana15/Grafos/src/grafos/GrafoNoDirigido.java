@@ -1,6 +1,7 @@
 package grafos;
 
 public class GrafoNoDirigido {
+
     private int numVertices;
     private int[][] matrizAdyacencia;
 
@@ -10,8 +11,13 @@ public class GrafoNoDirigido {
     }
 
     public void agregarArista(int origen, int destino) {
-        matrizAdyacencia[origen][destino] = 1;
-        matrizAdyacencia[destino][origen] = 1;
+//        if (origen == destino) {
+//            matrizAdyacencia[origen][destino] = 2;
+//        } else {
+            matrizAdyacencia[origen][destino] = 1;
+            matrizAdyacencia[destino][origen] = 1;
+//        }
+
     }
 
     public int obtenerValorArista(int origen, int destino) {
@@ -21,19 +27,19 @@ public class GrafoNoDirigido {
     public int[][] getMatrizAdyacencia() {
         return matrizAdyacencia;
     }
-    
-    public void presentar(){
+
+    public void presentar() {
         for (int i = 0; i < getMatrizAdyacencia().length; i++) {
-            System.out.printf("   %d",i);
+            System.out.printf("   %d", i);
         }
         System.out.println("");
         for (int i = 0; i < getMatrizAdyacencia().length; i++) {
-            System.out.printf("%d [",i);
+            System.out.printf("%d [", i);
             for (int j = 0; j < getMatrizAdyacencia()[i].length; j++) {
-                System.out.printf("%d   ",obtenerValorArista(i, j));
+                System.out.printf("%d   ", obtenerValorArista(i, j));
             }
             System.out.print("]\n");
         }
     }
-    
+
 }
